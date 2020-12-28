@@ -31,7 +31,7 @@ from tensorflow.keras.layers import Activation, Add, Conv1D, Conv2D, Dense, Drop
 #app = Flask(__name__)
 
 app = Flask(__name__)
-run_with_ngrok(app)   #starts ngrok when the app is run
+#run_with_ngrok(app)   #starts ngrok when the app is run
 
 
 try:
@@ -402,5 +402,5 @@ def upload():
     return None
 
 
-
-app.run()
+if __name__ == "__main__":	
+    app.run(debug=True)
